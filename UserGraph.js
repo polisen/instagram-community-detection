@@ -1,5 +1,14 @@
-import Edge from './Edge.js';
-import Vertex from './Vertex.js';
+import Edge from './data_structures/Edge.js';
+import Vertex from './data_structures/Vertex.js';
+
+
+
+
+/**
+ * TODO: Implement hashmap as vertex storing system for easy retrieval.
+ */
+
+
 
 export class Graph {
   constructor(isWeighted = false, isDirected = false) {
@@ -29,6 +38,9 @@ export class Graph {
   printVertices() {
     this.vertices.forEach(v => console.log(v.data.full_name))
   }
+
+
+  
 
   addEdge(vertexOne, vertexTwo, weight) {
     const edgeWeight = this.isWeighted ? weight : null;

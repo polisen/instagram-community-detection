@@ -1,9 +1,24 @@
 import { getFollowers, getFollowing, getUser} from "./getUsers.js";
-import {Graph} from './graph/index.js'
+import {Graph} from './UserGraph.js'
+
+
+const graph = new Graph();
+
+function createRelationshipsBetween(user, userList, param){
+    /**
+     * Add edges between node and nodes if they exist in graph.
+     * @param {string} user - the user to connect everyone else to.
+     * @param {array} userList - the users to connect to user.
+     * @param {string} param - the parameter to search by.
+     */
+
+    // 
+}
+
+
 
 
 async function main() {
-    const graph = new Graph();
     const username = 'm3gatech'
     const user = await getUser({username, type: 'brief'})
     graph.addVertex(user)
