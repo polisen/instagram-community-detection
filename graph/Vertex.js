@@ -3,6 +3,7 @@ import Edge from './Edge.js';
 export default class Vertex {
   constructor(data) {
     this.data = data;
+    this.name = data.username
     this.edges = [];
   }
 
@@ -22,7 +23,7 @@ export default class Vertex {
     const edgeList = this.edges.map(edge =>
         edge.weight !== null ? `${edge.end.data} (${edge.weight})` : edge.end.data);
 
-    const output = `${this.data} --> ${edgeList.join(', ')}`;
+    const output = `${this.name} --> ${edgeList.join(', ')}`;
     console.log(output);
   }
 }

@@ -10,13 +10,24 @@ export class Graph {
 
   addVertex(data) {
     const newVertex = new Vertex(data);
+
     this.vertices.push(newVertex);
 
     return newVertex;
   }
 
+  addMultipleVertices(array){
+    array.forEach(e => {
+      this.addVertex(e)
+    })
+  }
+
   removeVertex(vertex) {
     this.vertices = this.vertices.filter(v => v !== vertex);
+  }
+
+  printVertices() {
+    this.vertices.forEach(v => console.log(v.data.full_name))
   }
 
   addEdge(vertexOne, vertexTwo, weight) {

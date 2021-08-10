@@ -69,7 +69,7 @@ export const getUser = async ({username, type = 'full'}) => {
   await ig.simulate.preLoginFlow();
   const id = await ig.user.getIdByUsername(username);
   const info = await ig.user.info(id)
-  console.log(Object.keys(info))
+  // console.log(Object.keys(info))
   switch (type) {
     case 'brief':
       const {pk, username, full_name, is_private} = info;
